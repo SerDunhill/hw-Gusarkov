@@ -1,0 +1,11 @@
+.cont1, .cont2, .cont3{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.Slide{
+    width: 100%;
+}
+.zadania{
+    width: 50%;
+}
