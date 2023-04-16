@@ -1,3 +1,13 @@
+<?php
+date_default_timezone_set ('Asia/Yekaterinburg');
+$a = date('H');
+$InSec = $a * 3600;
+if ($InSec >= 36000 and $InSec <= 79200){
+    echo '<link href="../Styles/Styles_Day.css" rel="stylesheet">';
+}else{
+    echo '<link href="../Styles/Styles_Night.css" rel="stylesheet">';
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,14 +15,6 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <?php
-    $a = date('H');
-    if ($a < 10 && $a > 22){
-        echo '<link href="../Styles/Styles_Night.css" rel="stylesheet">';
-    }else{
-        echo '<link href="../Styles/Styles_Day.css" rel="stylesheet">';
-    }
-    ?>
     <title>Document</title>
 </head>
 <body>
@@ -21,17 +23,20 @@
         <div class="link"><a href="#Books">Книги</a></div>
         <div class="logo"><a href="#Wel">SG</a></div>
         <div class="link"><a href="#Games">Игры</a></div>
-        <div class="link"><a href="HW.php">"Вся домашка тут"</a></div>
+        <div class="link"><a href="HW.php#start">"Вся домашка тут"</a></div>
 </header>
 <div class="Welcome" id="Wel">Привет ! Меня зовут Сергей и ты на моей первой странице</div>
 <div class="container">
-    <div class="About" id="About">Сейчас я обучаюсь в онлайн-академии факт и наверное это единственное, что тут необходимо указывать. У меня есть хобби - люблю читать фантастику, чем более отрывную от реальности - тем лучше. А так же иногда играю в баскетбол.</div>
+    <div class="About" id="About"><?php require_once '../rec/Word.php' ?></div>
     <div class="Frame">
         <img src="../Images/Photo.jpg" alt="Моё фото" style="max-width: 100%; object-fit: cover">
     </div>
-    <div class="Revo">Очень нравится учиться программировать, особенно когда тебе в любой момент могут помочь "раздуплиться", если ты что то не понял.</div>
+    <div class="Revo"><?php require_once '../rec/Chet_word.php' ?>
+    </div>
 </div>
-<div class="plug"></div>
+<div class="plug"><?php include_once '../rec/num_word.php' ?><br>
+    <?php require_once '../rec/Birthday.php'?>
+</div>
 <div class="Book" id="Books">Книги которые мне понравились</div>
 <div class="container_2">
     <div class="text">Ну начнем с классики. Это отлично написанное произведение на тему человеческих пороков, которые не денутся никуда ещё очень долгое время. Произведение цепляет относительной простотой подачи таких неоднозначных тем как: жадность, зависть, ненависть и т.д. через призму "чистого" человека</div>
