@@ -1,11 +1,13 @@
-.cont1, .cont2, .cont3{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+body{
+    color: antiquewhite;
+    background-image: linear-gradient(#131313, #2f2f2f);
 }
-.Slide{
-    width: 100%;
+div{
+    border-bottom: solid antiquewhite 1px;
 }
-.zadania{
-    width: 50%;
+.SEE {
+    height: 400px;
+}
+.Task{
+    font-size: 30px;
 }
