@@ -1,12 +1,6 @@
 <?php
-date_default_timezone_set ('Asia/Yekaterinburg');
-$a = date('H');
-$InSec = $a * 3600;
-if ($InSec >= 36000 and $InSec <= 79200){
-    echo '<link href="../Styles/Styles_Day.css" rel="stylesheet">';
-}else{
-    echo '<link href="../Styles/Styles_Night.css" rel="stylesheet">';
-}
+require '../PHP/functions/Functions.php';
+Time_theme();
 ?>
 <!doctype html>
 <html lang="en">
@@ -27,15 +21,15 @@ if ($InSec >= 36000 and $InSec <= 79200){
 </header>
 <div class="Welcome" id="Wel">Привет ! Меня зовут Сергей и ты на моей первой странице</div>
 <div class="container">
-    <div class="About" id="About"><?php require_once '../rec/Word.php' ?></div>
+    <div class="About" id="About"><?php First_word(); ?></div>
     <div class="Frame">
         <img src="../Images/Photo.jpg" alt="Моё фото" style="max-width: 100%; object-fit: cover">
     </div>
-    <div class="Revo"><?php require_once '../rec/Chet_word.php' ?>
+    <div class="Revo"><?php Color_Word_task(); ?>
     </div>
 </div>
-<div class="plug"><?php include_once '../rec/num_word.php' ?><br>
-    <?php require_once '../rec/Birthday.php'?>
+<div class="plug"><?php Count_Word(); ?><br>
+    <?php Birthday();?>
 </div>
 <div class="Book" id="Books">Книги которые мне понравились</div>
 <div class="container_2">
@@ -80,9 +74,5 @@ if ($InSec >= 36000 and $InSec <= 79200){
     <div class="text">Удивительную историю о себе рассказывает молодой человек, к которому периодически подсаживаются люди на скамейке в городе Саванна, что находится в Штате Джорджия. Дело происходит на заре 80-х годов, а человека, сидящего на скамье, зовут Форрест Гамп.</div>
     <div class="text">Пострадав в результате несчастного случая, богатый аристократ Филипп нанимает в помощники человека, который менее всего подходит для этой работы, — молодого жителя предместья Дрисса, только что освободившегося из тюрьмы.</div>
 </div>
-<?php
-date_default_timezone_set ('Asia/Yekaterinburg');
-echo date('H:i');
-?>
 </body>
 </html>
