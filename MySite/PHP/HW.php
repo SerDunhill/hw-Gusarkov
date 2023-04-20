@@ -115,7 +115,7 @@
     </div>
     <div class="SEE">Актуальное Задание</div>
     <div>
-        <p class="Task" id="start">Задание 11 <br></p>
+        <p class="Task">Задание 11 <br></p>
         Дан массив с элементами 50, 45, 40, 35, 30.
         Найдите сумму элементов этого массива. Запишите ее в переменную $result.
 
@@ -153,7 +153,7 @@
         <?php
         include "../Moduls/task13.php";
         ?>
-        <p class="Task">Задание 14 <br></p>
+        <p class="Task" id="start">Задание 15 <br></p>
         Найти число Фибоначчи
 
         <p class="Task">Решение: <br></p>
