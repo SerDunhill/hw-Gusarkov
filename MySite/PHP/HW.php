@@ -153,6 +153,13 @@
         <?php
         include "../Moduls/task13.php";
         ?>
+        <p class="Task">Задание 14 <br></p>
+        Найти число Фибоначчи
+
+        <p class="Task">Решение: <br></p>
+        <?php
+        include "../Moduls/fib_task.php";
+        ?>
     </div>
 </body>
 </html>
