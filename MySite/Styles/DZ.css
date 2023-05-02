@@ -6,7 +6,9 @@ div{
     border-bottom: solid antiquewhite 1px;
 }
 .SEE {
-    height: 400px;
+    height: 150px;
+    font-size: 100px;
+    text-align: center;
 }
 .Task{
     font-size: 30px;

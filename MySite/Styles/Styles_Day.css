@@ -37,9 +37,7 @@
 }
 .container_2{
     display: grid;
-    height: 100%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4 , 1fr);
     align-items: center;
     justify-items: center;
     grid-gap: 1em;
@@ -67,46 +65,15 @@
     background-color: floralwhite;
 }
 .text{
-    padding: 10px;
+    min-height: 100%;
     border: solid 1px wheat;
     border-radius: 10px;
     font-family: "Avantgarde", sans-serif;
 }
-.fr{
-    width: 100%;
-    height: 100%;
-    margin: 10px;
-}
-.images_1, .images_2, .images_4, .images_5, .images_6, .images_7, .images_8, .images_3{
-    width: 100%;
-    height: 100%;
-    background-size: contain;
-    background-repeat: no-repeat;
-
-}
-.images_1{
-    background-image: url("https://avatars.mds.yandex.net/i?id=889834721237ec987ab37baf9db27121a4979b56-7552276-images-thumbs&n=13");
-}
-.images_2{
-    background-image: url("https://avatars.mds.yandex.net/i?id=d4637cd19a94e1340b6d330081347a31984a0653-8310601-images-thumbs&n=13");
-}
-.images_3 {
-    background-image: url("https://avatars.mds.yandex.net/i?id=af83f50762ffc3c221e8b114ed421763bf86b0fe-5369423-images-thumbs&n=13");
-}
-.images_4 {
-    background-image: url("https://avatars.mds.yandex.net/i?id=2bc6bfe854605896a364f8a925f8f516b4e161ce-5299402-images-thumbs&n=13");
-}
-.images_5{
-    background-image: url("https://avatars.mds.yandex.net/i?id=1cdb3914b165ba20344d0ca9bbd7896a8052f309-8263615-images-thumbs&n=13");
-}
-.images_6{
-    background-image: url("https://avatars.mds.yandex.net/i?id=d3cb2c5752ba7757a89a98c4bd956b4df6d1c9d8-9065783-images-thumbs&n=13");
-}
-.images_7{
-    background-image: url("https://avatars.mds.yandex.net/i?id=22f763cd3f9f909c659b99202651b12bbf37ff7b-9181338-images-thumbs&n=13");
-}
-.images_8{
-    background-image: url("https://avatars.mds.yandex.net/i?id=f7a3792fdf940d204c87f23a3f0540a6fe5a7f93-7760121-images-thumbs&n=13");
+img{
+    width: 500px;
+    height: 250px;
+    justify-items: center;
 }
 .Book, .games, .films{
     font-size: 50px;
@@ -114,9 +81,24 @@
     text-align: center;
     margin: 20px;
 }
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    border-top: solid black 1px;
+    background-color: white;
+    margin: 10px;
+}
+.MAIN{
+    width: 100%;
+    height: 600px;
+}
 .logo{
     font-size: 50px;
-    font-family: "Brush Script MT", cursive;
+    font-family: Snell Roundhand, coursive;
 }
 a:link{
     text-decoration: none;
@@ -134,7 +116,7 @@ a:visited{
     width: 100%;
     height: 500px;
 }
-@media screen and (max-width: 360px){
+/*@media screen and (max-width: 360px){
     .Welcome{
         font-size: 35px;
     }
@@ -209,7 +191,7 @@ a:visited{
     .images_1, .images_2, .images_4, .images_5, .images_6, .images_7, .images_8, .images_3{
         background-size: contain;
     }
-}
+}*/
 
 
 

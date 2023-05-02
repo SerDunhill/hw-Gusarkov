@@ -1,0 +1,45 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Snell Roundhand, coursive;
+    font-size: 30px;
+    color: dimgray;
+    background-color: floralwhite;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+.link{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+input{
+    margin: 10px 0;
+    padding: 10px;
+    border: unset;
+    border-bottom: 2px solid #e3e3e3;
+    outline: none;
+}
+button{
+    padding: 10px;
+    background-color: #e3e3e3;
+    border: unset;
+}
+p{
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+@font-face {
+font-family: "Snell Roundhand";
+src: url("../Fonts/ofont.ru_Snell Roundhand.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

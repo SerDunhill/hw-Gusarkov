@@ -142,6 +142,7 @@
         <p class="Task">Решение: <br></p>
         <?php
         require "../Moduls/task12.php";
+        task12();
         ?>
     </div>
     <div>
