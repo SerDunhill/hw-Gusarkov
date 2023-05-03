@@ -1,18 +1,21 @@
 <?php
+session_start();
+if(isset($_POST['login'])) {
+    $_SESSION['login'] = $_POST['login'];
+}
 /*МАССИВ ПОЛЬЗОВАТЕЛЕЙ*/
 $Users = ['Bob' => md5(123), 'Lenni' => md5('qwerty'), 'Colins' => md5('321')];
 /*ПРОВЕРКА НА РЕГИСТРАЦИЮ ПОЛЬЗОВАТЕЛЯ*/
-function Verification($Users) {
     if (isset($_POST['login']) and isset($_POST['password'])) {
         $login = $_POST['login'];
         $Pass = md5($_POST['password']);
         if (array_key_exists($login, $Users) and $Users[$login] == $Pass) {
             $_POST['password'] = $Pass;
-            echo 'Hello.php';
+            header('Location: ' . 'Hello.php');
         } else {
-            echo 'Error.php';
+            echo '<br>';
+            echo 'Данные неверны, попробуйте ещё раз';
         }
-    }
 }
 ?>
 <!doctype html>
@@ -26,7 +29,7 @@ function Verification($Users) {
     <title>Авторизация</title>
 </head>
 <body>
-<form action="<?php Verification($Users); ?>" method="post">
+<form method="post">
     <label>Логин</label>
     <input type="text" name="login" placeholder="Введите ваш логин">
     <label>Пароль</label>

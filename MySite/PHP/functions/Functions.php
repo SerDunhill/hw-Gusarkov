@@ -19,7 +19,7 @@ function Birthday(){
     echo 'Я в поисках себя уже ' . $diff = date_diff(date_create($Birthday), date_create($now))->days . ' дней';
 }
 function Color_Word_task(){
-    $str = 'Учусь скролить, пока безуспешно(';
+    $str = 'Учусь делать плавный скролл и слайсер, пока безуспешно(';
     $arr = explode(' ', trim($str));
     foreach ($arr as $key => $value){
         if ($key % 2 == 0){

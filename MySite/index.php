@@ -1,6 +1,9 @@
 <?php
+session_start();
+if (isset($_GET['style'])){setcookie('Theme', $_GET['style'], time() + 3600*24); }
 require './PHP/functions/Functions.php';
 Time_theme();
+$style = ['Day', 'Night', 'Rainbow'];
 ?>
 <!doctype html>
 <html lang="ru">
@@ -9,12 +12,41 @@ Time_theme();
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <?php
+    if (isset($_COOKIE['Theme'])){
+        $Theme = $_COOKIE['Theme'];
+        switch ($Theme){
+            case 'Day':
+                $Theme = '<link href="./Styles/Styles_Day.css" rel="stylesheet">';
+                break;
+            case 'Night':
+                $Theme = '<link href="./Styles/Styles_Night.css" rel="stylesheet">';
+                break;
+            case 'Rainbow':
+                $Theme = '<link href="./Styles/Rainbow.css" rel="stylesheet">';
+                break;
+        }
+    }
+    echo $Theme;
+    ?>
     <title>Document</title>
 </head>
 <body>
 <header class="cont_nav">
         <div class="link"><a href="PHP/Authorization.php">Авторизация</a></div>
-        <div class="link"><a href="PHP/index.php#Books">Книги</a></div>
+         <form action="">
+             <select name="style">
+                 <option disabled>Выберите стиль оформления</option>
+                 <option value="Day" >
+                     Дневная тема</option>
+                 <option value="Night">
+                     Ночная тема</option>
+                 <option value="Rainbow">
+                     Радуга)
+                 </option>
+             </select>
+             <button type="submit">Ну-ка попробуем</button>
+         </form>
         <div class="logo">SG</div>
         <div class="link"><a href="#Games">Игры</a></div>
         <div class="link"><a href="PHP/HW.php#start">"Вся домашка тут"</a></div>

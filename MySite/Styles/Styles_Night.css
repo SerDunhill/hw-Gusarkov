@@ -83,7 +83,8 @@ img{
     justify-items: center;
 }
 .Book, .games, .films{
-    height: 80px;
+    margin: 0;
+    padding: 10px;
     font-size: 50px;
     font-family: "URW Chancery L", cursive;
     text-align: center;
