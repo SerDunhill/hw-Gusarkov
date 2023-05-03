@@ -11,7 +11,7 @@ $Users = ['Bob' => md5(123), 'Lenni' => md5('qwerty'), 'Colins' => md5('321')];
         $Pass = md5($_POST['password']);
         if (array_key_exists($login, $Users) and $Users[$login] == $Pass) {
             $_POST['password'] = $Pass;
-            header('Location: ' . 'Hello.php');
+            header('Location: Hello.php' );
         } else {
             echo '<br>';
             echo 'Данные неверны, попробуйте ещё раз';

@@ -29,6 +29,7 @@ $style = ['Day', 'Night', 'Rainbow'];
     }
     echo $Theme;
     ?>
+    <link rel="stylesheet" href="./Styles/media.css">
     <title>Document</title>
 </head>
 <body>

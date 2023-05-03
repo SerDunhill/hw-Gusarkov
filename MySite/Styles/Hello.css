@@ -1,6 +1,14 @@
-.ava{
-    float: right;
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: antiquewhite;
 }
 div{
-    width: 50%;
+    width: 100%;
+    padding: 10px;
+}
+img{
+    width: 350px;
+    height: 300px;
+    align-self: center;
 }

@@ -1,10 +1,11 @@
 <?php
 session_start();
-echo '<h1>Привет ' . $_SESSION['login'] . '</h1>';
-$fotoPath = 'foto/';
-move_uploaded_file($_FILES['avatar']['tmp_name'], './' . $fotoPath);
-print_r($_FILES);
+if(isset($_FILES['avatar'])) {
+    $fotoPath = '../foto/' . $_FILES['avatar']['name'];
+    move_uploaded_file($_FILES['avatar']['tmp_name'], $fotoPath);
+}
 ?>
+<!--Надо настроить аватарку по дефолту, но я уже не успеваю(-->
 <!doctype html>
 <html lang="ru">
 <head>
@@ -19,6 +20,7 @@ print_r($_FILES);
 <div class="ava">
     <form method="post" enctype="multipart/form-data">
         <label for="avatar">Ваша аватарка</label>
+        <img src="../foto/<?php echo $_FILES['avatar']['name'] ?>" alt="Ваше фото">
         <br>
         <input type="file" name="avatar">
         <br>
@@ -27,17 +29,20 @@ print_r($_FILES);
 </div>
 <div>
     <?php
+    echo '<h1>Привет ' . $_SESSION['login'] . '</h1>';
     if (isset ($_SESSION['lastVisited'])) {
         echo '<h2>Последняя осещённая страница - ' . $_SESSION['lastVisited'] . '</h2>';
     }
     ?>
-</div>
-<div class="link">
     <a href="bitrix.php">Битрикс</a>
     <a href="fact.php">Факт-Академия</a>
 </div>
+<!--Как всё таки правильно встроить destroy?-->
 <form action="<?php /*session_destroy()*/?>">
 <button type="submit">Выйти из аккаунта</button>
 </form>
+<div>
+    <a href="../index.php"> На главную</a>
+</div>
 </body>
 </html>
