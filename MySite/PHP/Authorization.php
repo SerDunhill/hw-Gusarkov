@@ -1,22 +1,6 @@
 <?php
 session_start();
-if(isset($_POST['login'])) {
-    $_SESSION['login'] = $_POST['login'];
-}
-/*МАССИВ ПОЛЬЗОВАТЕЛЕЙ*/
-$Users = ['Bob' => md5(123), 'Lenni' => md5('qwerty'), 'Colins' => md5('321')];
-/*ПРОВЕРКА НА РЕГИСТРАЦИЮ ПОЛЬЗОВАТЕЛЯ*/
-    if (isset($_POST['login']) and isset($_POST['password'])) {
-        $login = $_POST['login'];
-        $Pass = md5($_POST['password']);
-        if (array_key_exists($login, $Users) and $Users[$login] == $Pass) {
-            $_POST['password'] = $Pass;
-            header('Location: Hello.php' );
-        } else {
-            echo '<br>';
-            echo 'Данные неверны, попробуйте ещё раз';
-        }
-}
+require('connect_db.php');
 ?>
 <!doctype html>
 <html lang="ru">
@@ -34,11 +18,25 @@ $Users = ['Bob' => md5(123), 'Lenni' => md5('qwerty'), 'Colins' => md5('321')];
     <input type="text" name="login" placeholder="Введите ваш логин">
     <label>Пароль</label>
     <input type="password" name="password" placeholder="Введите пароль">
-    <button>Войти</button>
+    <button type="submit">Войти</button>
     <p><b>Вы тут впервые? - <a href="Register.php">Регистрация</a></b></p>
     <div class="link">
         <a href="../index.php">На главную</a>
     </div>
+    <div><strong><?php echo 'Неправильный логин или пароль' ?></strong></div>
+    <?php
+    if(!isset($_POST)) {
+        $login = $_POST['login'];
+        $password = md5($_POST['password']);
+        $User_check = mysqli_query($connect, "SELECT * FROM `Users` WHERE `login` = '$login' && `password` = '$password'");
+        if (mysqli_num_rows($User_check) > 0){
+            header('Location: ../Hello.php');
+        } else {
+            $_SESSION['message'] = 'Неправильный логин или пароль';
+            unset($_SESSION['message']);
+        }
+    }
+    ?>
 </form>
 </body>
 </html>

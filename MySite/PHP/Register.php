@@ -1,8 +1,6 @@
 <?php
-/*print_r($_POST);*/
-/*МАССИВ ПОЛЬЗОВАТЕЛЕЙ*/
-$Users = ['Bob', 'Matew'];
-$Email = ['Bob@mail.ru', 'Matew@gmail.com'];
+session_start();
+
 ?>
 <!doctype html>
 <html lang="ru">
@@ -24,21 +22,26 @@ $Email = ['Bob@mail.ru', 'Matew@gmail.com'];
     <input type="email" name="email" placeholder="Укажите ваш email">
     <label>Пароль</label>
     <input type="password" name="password" placeholder="Придумайте пароль пароль">
-    <button>Зарегистрироваться</button>
+    <button type="submit">Зарегистрироваться</button>
     <p><b>Вы уже зарегистрированы? - <a href="Authorization.php">Авторизация</a></b></p>
+    <p class="message"><?php if (isset($_SESSION['message'])){ echo $_SESSION['message']; unset($_SESSION['message']); } ?></p>
     <!--Проверка зарегестрированных-->
     <?php
-    if(isset($_POST['login'])){
-        if (array_key_exists($_POST['login'], $Users) == $_POST['login']){
-            echo 'Такой логин уже существует';
-        }
-    }
-    echo '<br>';
-    if(isset($_POST['email'])) {
-        if (array_key_exists($_POST['email'], $Email) == $_POST['email']) {
-            echo 'Данный адрес уже используется ';
-        }
-    }
+        $name = $_POST['name'];
+        $login = $_POST['login'];
+        $password = $_POST['password'];
+        $password = md5($password);
+        $email = $_POST['email'];
+
+
+        require('connect_db.php');
+
+
+        mysqli_query($connect,
+            "INSERT INTO `Users` (`id_users`, `login`, `email`, `password`, `Name`)
+               VALUES (NULL, '$login', '$email', '$password', '$name')");
+        $_SESSION['message'] = 'Вы успешно зарегестрированны';
+        unset($_SESSION['message']);
     ?>
 </form>
 </body>
