@@ -35,22 +35,20 @@ $style = ['Day', 'Night', 'Rainbow'];
 <body>
 <header class="cont_nav">
         <div class="link"><a href="PHP/Authorization.php">Авторизация</a></div>
-         <form action="">
-             <select name="style">
-                 <option disabled>Выберите стиль оформления</option>
-                 <option value="Day" >
-                     Дневная тема</option>
-                 <option value="Night">
-                     Ночная тема</option>
-                 <option value="Rainbow">
-                     Радуга)
-                 </option>
-             </select>
-             <button type="submit">Ну-ка попробуем</button>
-         </form>
         <div class="logo">SG</div>
-        <div class="link"><a href="#Games">Игры</a></div>
-        <div class="link"><a href="PHP/HW.php#start">"Вся домашка тут"</a></div>
+        <form action="">
+            <select name="style">
+                <option disabled>Выберите стиль оформления</option>
+                <option value="Day" >
+                    Дневная тема</option>
+                <option value="Night">
+                    Ночная тема</option>
+                <option value="Rainbow">
+                    Радуга)
+                </option>
+            </select>
+            <button type="submit">Ну-ка попробуем</button>
+        </form>
 </header>
 <div class="Welcome" id="Wel">Привет ! Меня зовут Сергей и ты на моей первой странице</div>
 <div class="container">
@@ -91,8 +89,6 @@ $style = ['Day', 'Night', 'Rainbow'];
 </div>
 <footer>
     <div>Связаться со мной вы можете по номеру телефона: <br> 8-904-308-26-32</div>
-    <div>А так же немного инофрмации о страничке <br> <?php Count_Word(); ?></div>
-    <div><?php Birthday();?></div>
 </footer>
 </body>
 </html>

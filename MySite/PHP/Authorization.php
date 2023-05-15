@@ -1,6 +1,6 @@
 <?php
 session_start();
-require('connect_db.php');
+if(isset($_POST['login'])) {$_SESSION['login'] = $_POST['login'];}
 ?>
 <!doctype html>
 <html lang="ru">
@@ -13,7 +13,7 @@ require('connect_db.php');
     <title>Авторизация</title>
 </head>
 <body>
-<form method="post">
+<form action="CheckAuth.php" method="post">
     <label>Логин</label>
     <input type="text" name="login" placeholder="Введите ваш логин">
     <label>Пароль</label>
@@ -23,20 +23,9 @@ require('connect_db.php');
     <div class="link">
         <a href="../index.php">На главную</a>
     </div>
-    <div><strong><?php echo 'Неправильный логин или пароль' ?></strong></div>
-    <?php
-    if(!isset($_POST)) {
-        $login = $_POST['login'];
-        $password = md5($_POST['password']);
-        $User_check = mysqli_query($connect, "SELECT * FROM `Users` WHERE `login` = '$login' && `password` = '$password'");
-        if (mysqli_num_rows($User_check) > 0){
-            header('Location: ../Hello.php');
-        } else {
-            $_SESSION['message'] = 'Неправильный логин или пароль';
-            unset($_SESSION['message']);
-        }
-    }
-    ?>
+    <div><strong>
+            <?php if(isset($_SESSION['message'])){ echo $_SESSION['message']; }?>
+        </strong></div>
 </form>
 </body>
 </html>

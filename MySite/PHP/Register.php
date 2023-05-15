@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <!doctype html>
 <html lang="ru">
@@ -13,7 +12,7 @@ session_start();
     <title>Регистрация</title>
 </head>
 <body>
-<form method="post">
+<form action="CheckReg.php" method="post">
     <label>Имя</label>
     <input type="text" name="name" placeholder="Введите ваше Имя">
     <label>Логин</label>
@@ -25,24 +24,6 @@ session_start();
     <button type="submit">Зарегистрироваться</button>
     <p><b>Вы уже зарегистрированы? - <a href="Authorization.php">Авторизация</a></b></p>
     <p class="message"><?php if (isset($_SESSION['message'])){ echo $_SESSION['message']; unset($_SESSION['message']); } ?></p>
-    <!--Проверка зарегестрированных-->
-    <?php
-        $name = $_POST['name'];
-        $login = $_POST['login'];
-        $password = $_POST['password'];
-        $password = md5($password);
-        $email = $_POST['email'];
-
-
-        require('connect_db.php');
-
-
-        mysqli_query($connect,
-            "INSERT INTO `Users` (`id_users`, `login`, `email`, `password`, `Name`)
-               VALUES (NULL, '$login', '$email', '$password', '$name')");
-        $_SESSION['message'] = 'Вы успешно зарегестрированны';
-        unset($_SESSION['message']);
-    ?>
 </form>
 </body>
 </html>
