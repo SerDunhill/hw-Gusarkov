@@ -26,8 +26,8 @@ $style = ['Day', 'Night', 'Rainbow'];
                 $Theme = '<link href="./Styles/Rainbow.css" rel="stylesheet">';
                 break;
         }
-    }
     echo $Theme;
+    }
     ?>
     <link rel="stylesheet" href="./Styles/media.css">
     <title>Document</title>
