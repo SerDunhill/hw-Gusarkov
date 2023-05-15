@@ -13,4 +13,11 @@ mysqli_query($connect,
                VALUES (NULL, '$login', '$email', '$password', '$name')");
 $_SESSION['message'] = 'Вы успешно зарегестрированны';
 unset($_SESSION['message']);
-header('Location: Authorization.php');
+
+$User_check = mysqli_query($connect, "SELECT * FROM `Users` WHERE `login` = '$login' && `email` = '$email'");
+if (mysqli_num_rows($User_check) > 0){
+    $_SESSION['message'] = 'Данный логин или адресс уже используются';
+    header('Location: Register.php');
+} else {
+    header('Location: Authorization.php');
+}
