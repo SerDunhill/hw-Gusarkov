@@ -1,9 +1,10 @@
 <?php
 session_start();
 if(isset($_FILES['avatar'])) {
-    $fotoPath = '../foto/' . $_FILES['avatar']['name'];
+    $fotoPath = $_FILES['avatar']['name'];
     move_uploaded_file($_FILES['avatar']['tmp_name'], $fotoPath);
-}
+    $_FILES['avatar']['name'] = $fotoPath;
+} else $_FILES['avatar']['name'] = 'i.webp';
 if (isset($_POST['login'])) {
     $_SESSION['login'] = $_POST['login'];
 }
@@ -21,8 +22,7 @@ if (isset($_POST['login'])) {
 <body>
 <div class="ava">
     <form method="post" enctype="multipart/form-data">
-        <label for="avatar">Ваша аватарка</label>
-        <img src="../foto/<?php if (isset($_FILES['avatar'])){ echo $_FILES['avatar']['name']; }?>" alt="Ваше фото">
+        <img src="../foto/<?php  echo $_FILES['avatar']['name']?>" alt="Ваше фото">
         <br>
         <input type="file" name="avatar" accept="image/*">
         <br>

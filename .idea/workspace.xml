@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6af11593-2d4a-4bbf-a276-e1fd6684784c" name="Changes" comment="" />
+    <list default="true" id="6af11593-2d4a-4bbf-a276-e1fd6684784c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/.idea/MySite.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Fonts/ofont.ru_Snell Roundhand.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Images/Civa.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Images/Divin.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Images/Dragon.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Images/Faust.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Images/Gamp.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Images/OnePlus.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Images/Photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Images/i.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Images/put.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/PHP/Authorization.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/PHP/CheckAuth.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/PHP/CheckReg.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/PHP/Hello.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/PHP/Register.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/PHP/bitrix.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/PHP/connect_db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/PHP/fact.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/PHP/functions/Functions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Styles/Authorization.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Styles/DZ.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Styles/Hello.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Styles/Rainbow.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Styles/Styles_Day.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Styles/Styles_Night.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Styles/media.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/Users.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/foto/image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/rec/Chet_word.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MySite/rec/Word.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,15 +50,23 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2OeaEy9kQW6MvSSjkByrb4T1bni" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -29,7 +77,11 @@
       <option name="presentableId" value="Default" />
       <updated>1681923394653</updated>
       <workItem from="1681923396374" duration="2000" />
+      <workItem from="1684298161110" duration="1733000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
