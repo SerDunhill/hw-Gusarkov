@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_GET['style'])){setcookie('Theme', $_GET['style'], time() + 3600*24); }
-require './PHP/functions/Functions.php';
+require './PHP/FunctionsAndClasses/Functions.php';
 Time_theme();
 $style = ['Day', 'Night', 'Rainbow'];
 ?>
