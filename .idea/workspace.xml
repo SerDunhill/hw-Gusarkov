@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6af11593-2d4a-4bbf-a276-e1fd6684784c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PHP/FunctionsAndClasses/AUTHCLAS.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PHP/FunctionsAndClasses/REGCLASS.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PHP/FunctionsAndClasses/DBClass.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/CheckAuth.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/CheckAuth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PHP/CheckReg.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/CheckReg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PHP/functions/Functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/FunctionsAndClasses/Functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/FunctionsAndClasses/AUTHCLAS.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/FunctionsAndClasses/AUTHCLAS.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/FunctionsAndClasses/REGCLASS.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/FunctionsAndClasses/REGCLASS.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/connect_db.php" beforeDir="false" afterPath="$PROJECT_DIR$/PHP/connect_db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PHP/image.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -48,6 +50,8 @@
       <workItem from="1681923396374" duration="2000" />
       <workItem from="1684298161110" duration="1733000" />
       <workItem from="1684345209283" duration="2531000" />
+      <workItem from="1684416983976" duration="359000" />
+      <workItem from="1684417962183" duration="1228000" />
     </task>
     <servers />
   </component>

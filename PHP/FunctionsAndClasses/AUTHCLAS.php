@@ -5,12 +5,12 @@ class AUTHCLAS
     private $password;
     private $User_check;
 
-    public function CheckAuth()
+    public function CheckAuth($login, $password, $DB)
     {
-        require_once 'connect_db.php';
-        $login = $_POST['login'];
-        $password = md5($_POST['password']);
-        $User_check = mysqli_query($connect, "SELECT * FROM `Users` WHERE `login` = '$login' && `password` = '$password'");
+        $this->login=$login;
+        $this->password=$password;
+
+        $User_check = mysqli_query($DB, "SELECT * FROM `Users` WHERE `login` = '$login' && `password` = '$password'");
         if (mysqli_num_rows($User_check) > 0) {
             header('Location: Hello.php');
         } else {
